@@ -1,23 +1,87 @@
 aid: azimuth-grc
+
 name: Azimuth GRC
-description: 'Azimuth GRC is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://irp.cdn-website.com/b6676fb3/dms3rep/multi/opt/Untitled+design+-+2025-05-08T154514.455-1920w.png
+
+description: Azimuth GRC provides automated compliance management software that transforms complex regulatory requirements into clear, actionable
+  guidance. Their platform, VALIDATOR, offers real‑time monitoring, audit automation, and curated legal content to help organizations maintain
+  continuous compliance across industries. With features like ROI calculators, detailed reporting, and integration capabilities, Azimuth GRC serves
+  enterprises seeking to streamline governance, risk, and compliance processes.
+
 url: https://raw.githubusercontent.com/api-evangelist/azimuth-grc/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Compliance
+- Governance
+- Risk Management
+- Automation
+- SaaS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/azimuth-grc-llms.txt
+- type: Hosts
+  url: hosts/azimuth-grc-hosts.yml
+- type: DomainSecurity
+  url: security/azimuth-grc-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.azimuthgrc.com
+- type: Blog
+  url: https://www.azimuthgrc.com/blog
+- type: Documentation
+  url: https://www.azimuthgrc.com/val
+- type: APIReference
+  url: https://www.azimuthgrc.com/val
+- type: GettingStarted
+  url: https://www.azimuthgrc.com/val-registration
+- type: Support
+  url: https://www.azimuthgrc.com/contact
+- type: PrivacyPolicy
+  url: https://www.azimuthgrc.com/privacy
+- type: TermsOfService
+  url: https://www.azimuthgrc.com/subscription-agreement
+- type: SignUp
+  url: https://www.azimuthgrc.com/book-a-demo
+
+apis:
+- name: Azimuth GRC API
+  description: Azimuth GRC offers the VALIDATOR platform with API access for compliance automation, as described on the developer page.
+  humanURL: https://www.azimuthgrc.com/val
+  baseURL: null
+  aid: azimuth-grc:azimuth-grc-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Developer pages are HTML with no machine‑readable OpenAPI or other contract discovered despite probing common spec URLs.
+  evidence:
+  - url: https://api.azimuthgrc.com/openapi.json
+    status: 0
+  checked: 2026-09-27
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

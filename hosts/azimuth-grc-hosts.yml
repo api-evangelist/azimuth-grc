@@ -1,0 +1,54 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 2
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.azimuthgrc.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: azimuthgrc.com
+  role: api
+  relation: own
+- host: irp.cdn-website.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: cdn-website.com
+  role: other
+  relation: other-domain
+- host: www.azimuthgrc.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - Blog
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Support
+  - PrivacyPolicy
+  - TermsOfService
+  - SignUp
+  serves:
+  - docs
+  registrable_domain: azimuthgrc.com
+  role: website
+  relation: own

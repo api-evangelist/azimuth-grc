@@ -1,0 +1,22 @@
+generated: 2026-09-27
+method: probed
+source: https://www.azimuthgrc.com/privacy
+signals:
+  data_subject_request:
+    evidence:
+      - source: privacy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        url: https://www.azimuthgrc.com/privacy
+        section: "You may request to:"
+        quote: "You may request to: Receive confirmation as to whether or not personal information concerning you is being processed, and access your stored personal information, together with supplementary information."
+        note: Provides data subject rights to access, copy, rectify, erase, object, restrict processing and lodge complaints.
+  data_retention:
+    evidence:
+      - source: privacy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        url: https://www.azimuthgrc.com/privacy
+        section: Retention
+        quote: "We will retain your personal information for as long as necessary to provide our services, and as necessary to comply with our legal obligations, resolve disputes, and enforce our policies."
+        note: States retention period is indefinite, based on necessity and legal obligations.
