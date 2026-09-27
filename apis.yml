@@ -78,7 +78,7 @@ x-coverage:
   evidence:
   - url: https://api.azimuthgrc.com/openapi.json
     status: 0
-  checked: 2026-09-27
+  checked: '2026-09-27'
 x-enrichment:
   date: '2026-09-27'
   status: enriched
